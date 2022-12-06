@@ -1,7 +1,7 @@
 {
   "name": "usb-print",
   "version": "0.0.1",
-  "description": "Rewaa USB Print Suppor",
+  "description": "Rewaa USB Print Support",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
