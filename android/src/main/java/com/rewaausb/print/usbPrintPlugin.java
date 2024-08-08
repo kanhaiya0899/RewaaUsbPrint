@@ -158,7 +158,12 @@ public class usbPrintPlugin extends Plugin {
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
         filter.addAction(UsbManager.ACTION_USB_ACCESSORY_ATTACHED);
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
-        mContext.registerReceiver(mUsbDeviceReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mContext.registerReceiver(mUsbDeviceReceiver, filter,Context.RECEIVER_NOT_EXPORTED);
+        }
+        else {
+            mContext.registerReceiver(mUsbDeviceReceiver, filter);
+        }
         Log.e(TAG, "initialized");
 
 //        LocalBroadcastManager.getInstance(getContext()).registerReceiver(aLBReceiver,
