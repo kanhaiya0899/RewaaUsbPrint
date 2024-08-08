@@ -12,6 +12,7 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
 import android.util.Base64;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
